@@ -3,9 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BVideo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="stars.css">
+    <script src="slider.js" defer></script>
+    <script src="goods_init.js" defer></script>
+    <script src="filter.js" defer></script>
+    <script src="sort.js" defer></script>
+    <script src="index.js" defer></script>
 </head>
 <body>
-    
+    <header>
+        <section class="header-div">
+            <div class="header-wrapper">
+                <div class="header-text">
+                    <img src="img/logo.png">   
+                </div>
+                <div class="header-buttons">
+                    <button class="header-but">Sign Up</button>
+                    <button class="header-but">Sign In</button>
+                    <button class="header-but">
+                        Basket
+                        <div class="goods-counter hide-div">1</div>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <section class="main-div">
+        <div class="ad-slider">
+            <div class="slider-wrapper"></div>
+            <a class="slider-button slider-button-left" role="button">
+                <img src="img/arrowl.png">
+            </a> 
+            <a class="slider-button slider-button-right slider-button-show" role="button">
+                <img src="img/arrowr.png">
+            </a>
+            <div class="slider-dots">
+                <div class="slider-dots-wrapper"></div>
+            </div> 
+        </div>
+
+        <div class="sort-panel">
+            <select class="sort-selector">
+                <option value="rate">Сначала популярные</option>
+                <option value="price">Сначала подешевле</option>
+                <option value="pricedown">Сначала дорогие</option>
+                <option value="discount">Сначала со скидкой</option>
+            </select>
+        </div>
+        <section class="shop-panel">
+            <div class="filter">
+                <select class="selector type-selector">
+                    <option value="">Все категории</option>
+                    <option value="Ноутбуки">Ноутбуки</option>
+                    <option value="Смартфоны">Смартфоны</option>
+                    <option value="Телевизоры">Телевизоры</option>
+                    <option value="Мониторы">Мониторы</option>
+                    <option value="Наушники">Наушники</option>
+                </select>
+
+                <select class="selector vendor-selector">
+                    <option value="">Все производители</option>
+                    <option value="Apple">Apple</option>
+                    <option value="Samsung">Samsung</option>
+                    <option value="Huawei">Huawei</option>
+                    <option value="HP">HP</option>
+                    <option value="Sony">Sony</option>
+                    <option value="LG">LG</option>
+                </select>
+
+                <div class="filter-option">
+                    <a class="filter-text">Цена: </a>
+                    <div class="filter-price">
+                        <input type="text" class="input-price" id="min-price" value="">
+                        <a> - </a>
+                        <input type="text" class="input-price" id="max-price" value="">
+                    </div>
+                </div>
+
+                <div class="filter-option"> 
+                    <a class="filter-text">Товары со скидкой</a>
+                    <div id="check-sales-wrap">
+                        <input type="checkbox" id="check-sales">
+                    </div>
+                </div>
+
+                <button class="accept-filters">Применить</button>
+            </div>
+            <div class="good-list"></div>
+        </section>
+    </section>
 </body>
 </html>
